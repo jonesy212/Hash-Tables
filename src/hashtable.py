@@ -6,6 +6,8 @@ class LinkedPair:
         self.key = key
         self.value = value
         self.next = None
+
+
 class HashTable:
     '''
     A hash table that with `capacity` buckets 
@@ -22,9 +24,17 @@ class HashTable:
         Hash an arbitrary key and return an integer.
         You may replace the Python hash with DJB2 as a stretch goal.
         '''
+    def _hash(self, key):
+        '''
+        Hash an arbitrary key and return an integer.
+
+        You may replace the Python hash with DJB2 as a stretch goal.
+        '''
+        return hash(key)
+
     def _hash_djb2(self, key):
         '''
-        Hash an arbitrary ke using DJB2 hash
+        Hash an arbitrary key using DJB2 hash
 
         OPTIONAL STRETCH: Research and implement DJB2
         '''
